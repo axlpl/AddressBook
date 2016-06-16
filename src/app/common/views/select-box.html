@@ -1,16 +1,16 @@
 <div class="select-box">
     <div class="select-box__wrapper">
-        <input class="select-box__input"
+        <input class="field__input"
                name="{{::name}}"
                id="{{::name}}"
                type="text"
                ng-model="value"
                ng-required="required"
+               ng-click="open()"
                autocomplete="off" />
-        <button type="button" class="select-box__open" ng-click="open()"></button>
     </div>
-    <div class="select-box__dropdown" ng-hide="!isOpen">
-        <div class="select-box__option"
+    <div class="field__dropdown" ng-hide="!isOpen">
+        <div class="field__dropdown-option"
              ng-repeat="option in values | filter: {name: value} track by $index"
              ng-click="setValue(option.name)">{{ option.name }}</div>
     </div>

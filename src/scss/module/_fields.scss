@@ -28,6 +28,32 @@
         font-size: 1.5rem;
     }
 
+    &__dropdown {
+        border: {
+            bottom: 1px solid $color-main-border;
+            left: 1px solid $color-main-border;
+            right: 1px solid $color-main-border;
+        }
+
+        border-bottom: {
+            left-radius: 0.3rem;
+            right-radius: 0.3rem;
+        }
+        max-height: 15rem;
+        overflow: auto;
+        font-size: 1.4rem;
+
+        &-option {
+            padding: 1rem 1rem;
+            color: $color-text;
+
+            &:hover {
+                background: rgba($color-main-border, 0.2);
+                cursor: pointer;
+            }
+        }
+    }
+
     &__input {
         font-size: 2.2rem;
         line-height: 2rem;
