@@ -1,0 +1,33 @@
+.header {
+    padding: {
+        left: 2rem;
+        right: 2rem;
+        top: 1rem;
+        bottom: 1.2rem;
+    }
+    background: $color-header;
+    box-sizing: border-box;
+    height: 6rem;
+    box-shadow: 0 0.3rem 0.4rem 0 rgba($color-shadow, 0.2);
+
+    &__title {
+        float: left;
+        line-height: 3.8rem;
+        height: 3.8rem;
+        font-size: 2.4rem;
+    }
+
+    &__nav {
+        float: right;
+
+        &-item {
+            float: left;
+            line-height: 3.8rem;
+            height: 3.8rem;
+            padding: {
+                left: 1rem;
+                right: 1rem;
+            }
+        }
+    }
+}

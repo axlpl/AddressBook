@@ -1,0 +1,5 @@
+<ul>
+    <li ng-repeat="contact in ContactsList.contacts track by $index">
+        {{ contact.firstName }} {{ contact.lastName }} {{ contact.email }} {{ contact.country }} <a ui-sref="main.contacts.edit({contactId: contact._id})">edit</a>
+    </li>
+</ul>

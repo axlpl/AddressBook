@@ -1,0 +1,12 @@
+.field {
+
+    &__valid {
+        display: none;
+
+        &--error {
+            display: block;
+            color: $color-error;
+            animation: showIn .5s forwards linear;
+        }
+    }
+}

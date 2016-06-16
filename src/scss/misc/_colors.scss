@@ -1,0 +1,19 @@
+$white: #fff;
+$blue: #06c;
+$red: #e50000;
+$black: #000;
+$grey: #ececec;
+$grey-darken: #d7d7d7;
+
+$color-primary: $blue;
+$color-primary-hover: lighten($blue, 20%);
+$color-secondary: $red;
+$color-secondary-hover: lighten($red, 20%);
+$color-btn-text: $white;
+$color-text: $black;
+$color-background: $grey;
+$color-shadow: $black;
+$color-header: $white;
+$color-main: $white;
+$color-main-border: $grey-darken;
+$color-error: $red;
