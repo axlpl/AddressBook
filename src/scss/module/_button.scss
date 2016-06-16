@@ -7,6 +7,11 @@
     box-shadow: 0 0.1rem 0.2rem 0 rgba($color-shadow, 0.4);
     padding: 1rem 2rem;
     outline: none;
+    text-decoration: none;
+
+    &--small {
+        padding: 0.5rem 1rem;
+    }
 
     &--primary {
         background: $color-primary;
