@@ -1,6 +1,0 @@
-$grid-settings : (
-        block       : '.grid',  // {String}   - Block Class {String}
-        slice       : 12,       // {Number}   - Number of available columns
-        gutter      : 10px,     // {Number}   - Gutter between columns ** requires unit of measure **
-        breakpoint  : 767px     // {Number}   - Maps to $breakpoint-list or just a window width
-);
