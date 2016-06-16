@@ -18,7 +18,6 @@ angular
       
       function save(valid) {
         this.hasClickedOnSubmit = true;
-        console.log(valid);
         if (valid) {
           this.isSaving = true;
           ContactItems.save(this.model, this.params.contactId);
