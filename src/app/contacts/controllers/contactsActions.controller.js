@@ -1,6 +1,6 @@
 'use strict';
 import angular from 'angular';
-import countries from 'json!../../../../node_modules/country-list/data.json';
+import countries from 'json!country-list/data';
 
 angular
   .module('AddressBookContacts')
