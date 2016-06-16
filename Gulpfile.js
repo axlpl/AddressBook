@@ -41,10 +41,15 @@ gulp.task('app', () => {
     .pipe(jshint.reporter('default'));
 });
 
-gulp.task("html", () => {
+gulp.task('html', () => {
   return gulp.src('./src/**/*.html')
     .pipe(gulp.dest('dist'));
-})
+});
+
+gulp.task('fonts', () => {
+  return gulp.src('./src/fonts/*.*')
+    .pipe(gulp.dest('dist/fonts'));
+});
 
 gulp.task('scss', () => {
   return gulp.src('src/scss/main.scss')
@@ -58,4 +63,4 @@ gulp.task('scss', () => {
     .pipe(gulp.dest('dist/css'));
 });
 
-gulp.task('default', ['scss', 'js', 'html']);
+gulp.task('default', ['scss', 'fonts', 'js', 'html']);

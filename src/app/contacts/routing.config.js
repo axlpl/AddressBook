@@ -2,14 +2,14 @@ import angular from 'angular';
 
 angular
   .module('AddressBookContacts')
-  .config(/* @ngInject */ ($stateProvider) => {
+  .config(/* @ngInject */ ($stateProvider, BASE_URL) => {
     $stateProvider
       .state('main.contacts', {
         url: 'contacts',
         abstract: true
       })
       .state('main.contacts.list', {
-        url: '/list',
+        url: `^${BASE_URL}`,
         views: {
           'main@': {
             templateUrl: 'app/contacts/views/list.html',

@@ -8,3 +8,4 @@ import './services/formValidation.service';
 import './directives/selectBox.directive';
 // components
 import './components/messages.component';
+import './components/navBar.component';

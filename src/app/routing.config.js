@@ -15,13 +15,5 @@ angular
             template: '<messages></messages>'
           }
         }
-      })
-      .state('main.home', {
-        url: `^${BASE_URL}`,
-        views: {
-          'main@': {
-            templateUrl: 'app/views/main.html'
-          }
-        }
       });
   });

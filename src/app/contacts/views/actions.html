@@ -1,77 +1,65 @@
+<div class="page__section">
+    <h2 class="page__title">{{::ContactsActions.title}}</h2>
+</div>
 <form name="ContactForm" id="ContactForm" ng-submit="ContactsActions.save(ContactForm.$valid)" novalidate>
-    <div class="grid">
-        <div class="grid__col--1-5">
+    <div class="field__wrapper" ng-class="{ 'field__wrapper--error': ContactsActions.hasError('firstName', ContactForm, ContactsActions.hasClickedOnSubmit) }">
+        <label class="field__label" for="firstName">
             First name:
-        </div>
-        <div class="grid__col--4-5">
-            <input type="text"
-                   class="input"
-                   id="firstName"
-                   name="firstName"
-                   required
-                   ng-model="ContactsActions.model.firstName" />
-
-            <div ng-class="{ 'field__valid--error': ContactsActions.hasError('firstName', ContactForm, ContactsActions.hasClickedOnSubmit) }"
-                 class="field__valid">Error, field is not valid</div>
-        </div>
-
-        <div class="grid__col--1-5">
+            <span class="field__valid">(This field is required)</span>
+        </label>
+        <input type="text"
+               class="field__input"
+               id="firstName"
+               name="firstName"
+               required
+               ng-model="ContactsActions.model.firstName" />
+    </div>
+    <div class="field__wrapper" ng-class="{ 'field__wrapper--error': ContactsActions.hasError('lastName', ContactForm, ContactsActions.hasClickedOnSubmit) }">
+        <label class="field__label" for="lastname">
             Last name:
-        </div>
-        <div class="grid__col--4-5">
-            <input type="text"
-                   class="input"
-                   id="lastName"
-                   name="lastName"
-                   required
-                   ng-model="ContactsActions.model.lastName" />
-
-            <div ng-class="{ 'field__valid--error': ContactsActions.hasError('lastName', ContactForm, ContactsActions.hasClickedOnSubmit) }"
-                 class="field__valid">Error, field is not valid</div>
-        </div>
-
-        <div class="grid__col--1-5">
+            <span class="field__valid">(This field is required)</span>
+        </label>
+        <input type="text"
+               class="field__input"
+               id="lastName"
+               name="lastName"
+               required
+               ng-model="ContactsActions.model.lastName" />
+    </div>
+    <div class="field__wrapper" ng-class="{ 'field__wrapper--error': ContactsActions.hasError('email', ContactForm, ContactsActions.hasClickedOnSubmit) }">
+        <label class="field__label" for="email">
             Email address:
-        </div>
-        <div class="grid__col--4-5">
-            <input type="email"
-                   class="input"
-                   id="email"
-                   name="email"
-                   required
-                   ng-model="ContactsActions.model.email" />
-
-            <div ng-class="{ 'field__valid--error': ContactsActions.hasError('email', ContactForm, ContactsActions.hasClickedOnSubmit) }"
-                 class="field__valid">Error, field is not valid</div>
-        </div>
-
-        <div class="grid__col--1-5">
+            <span class="field__valid">(This field is required and should be in email format)</span>
+        </label>
+        <input type="email"
+               class="field__input"
+               id="email"
+               name="email"
+               required
+               ng-model="ContactsActions.model.email" />
+    </div>
+    <div class="field__wrapper" ng-class="{ 'field__wrapper--error': ContactsActions.hasError('country', ContactForm, ContactsActions.hasClickedOnSubmit) }">
+        <label class="field__label" for="country">
             Select or type country:
-        </div>
-        <div class="grid__col--4-5">
-            <select-box name="country"
-                        required="required"
-                        ng-model="ContactsActions.model.country"
-                        values="ContactsActions.countries"></select-box>
-
-            <div ng-class="{ 'field__valid--error': ContactsActions.hasError('country', ContactForm, ContactsActions.hasClickedOnSubmit) }"
-                 class="field__valid">Error, field is not valid</div>
-        </div>
-
-        <div class="grid__col--push-1-5 grid__col--4-5">
-            <button type="submit"
-                    class="button button--primary"
-                    ng-disabled="ContactsActions.isSaving">
-                Save
-            </button>
-
-            <button type="button"
-                    class="button button--secondary"
-                    ng-click="ContactsActions.remove()"
-                    ng-if="ContactsActions.params.contactId">
-                Remove
-            </button>
-        </div>
+            <span class="field__valid">(This field is required)</span>
+        </label>
+        <select-box name="country"
+                    required="required"
+                    ng-model="ContactsActions.model.country"
+                    values="ContactsActions.countries"></select-box>
+    </div>
+    <div class="field__wrapper field__wrapper--buttons">
+        <button type="button"
+                class="button button--secondary"
+                ng-click="ContactsActions.remove()"
+                ng-if="ContactsActions.params.contactId">
+            Remove
+        </button>
+        <button type="submit"
+                class="button button--primary"
+                ng-disabled="ContactsActions.isSaving">
+            Save
+        </button>
     </div>
 </form>
 

@@ -9,6 +9,11 @@
         width: 100%;
         border-radius: 0.3rem;
         box-sizing: border-box;
-        padding: 2rem 1.5rem;
+        padding: {
+            top: 3.5rem;
+            left: 3.5rem;
+            right: 3.5rem;
+            bottom: 1.9rem;
+        }
     }
 }

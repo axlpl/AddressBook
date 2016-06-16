@@ -12,6 +12,7 @@ angular
       this.params = $stateParams;
       this.hasError = FormValidation.hasError;
       this.hasClickedOnSubmit = false;
+      this.title = (this.params.contactId) ? 'Update record' : 'Add new record';
       
       this.save = save.bind(this);
       this.remove = remove.bind(this);
